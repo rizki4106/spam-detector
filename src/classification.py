@@ -15,7 +15,7 @@ class FilterMessage:
         """
         Run classification using K-Neirest Neighbors Algorthm
         """
-        dataset = pd.read_json("./data/message.json");
+        dataset = pd.read_csv("./data/message.csv");
         x = dataset.iloc[:, 0].values
         y = dataset.iloc[:, -1].values
 
