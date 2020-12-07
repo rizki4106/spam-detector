@@ -6,7 +6,7 @@ This program made for classifying text messages to be spam or ham. To implement 
 ## Dataset
 The data that we used for predict message located in *data/message.json*, we need more data to make this programs more perfect
 ## Performance
-From 17 rows data set we used 70% as training data and 30% as testing data
+From 17 rows dataset we used 70% as training data and 30% as testing data
 
 Confusion Matrix
 ![](https://i.postimg.cc/D0MHYgwd/confusion-matrix.png)
