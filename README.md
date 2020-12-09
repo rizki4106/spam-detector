@@ -28,16 +28,8 @@ git clone https://github.com/rizki4106/spam-detector.git
 cd spam-detector && pip3 install -r requirements.txt
 ```
 ```bash
-open main.py
+server-debung.sh
 ```
-```python
-from src import filter
-
-msg = input("Masukan pesan : ")
-
-print(filter.predict(msg))
-```
-
 ```bash
-python3 main.py
+access at http://127.0.0.1:5000
 ```

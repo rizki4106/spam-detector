@@ -1,0 +1,57 @@
+#pesan{
+    min-height: 200px;
+    resize: none;
+}
+.similar-message{
+    width: 100%;
+    border: 1px solid #dfd3d3;
+    padding: 4% 4% 4% 4%;
+    margin: 4% 0% 4% 0%;
+    border-left: 4px solid rgb(19, 185, 19);
+    font-size: 16px;
+    color: #363636;
+}
+.share-container
+{
+    width: 100%;
+    margin: 10% 0% 10% 0%;
+}
+.container-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5%;
+}
+.btn-share{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dfd3d3;
+    border-radius: 50px;
+    color: #363636;
+    margin-right: 5%;
+}
+.facebook
+{
+    color: white;
+    background-color: rgb(63, 63, 226);
+    border: none;
+}
+.twitter{
+    border: none;
+    color: white;
+    background-color: rgb(81, 199, 235);
+}
+@keyframes tombol {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(0.8);
+    }100%{
+        transform: scale(1);
+    }
+}
+.btn-share:focus{
+    outline: none;
+    animation: tombol 0.3s ease forwards;
+}
