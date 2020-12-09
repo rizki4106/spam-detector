@@ -29,6 +29,11 @@ cd spam-detector && pip3 install -r requirements.txt
 ```
 ```bash
 server-debung.sh
+
+or
+
+export FLASK_APP=main.py
+flask run
 ```
 ```bash
 access at http://127.0.0.1:5000
