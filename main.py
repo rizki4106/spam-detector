@@ -17,5 +17,12 @@ def home():
     else:
         return render_template("index.html")
 
+# get acurracy score from the user
+
+@app.route("/score", methods=['POST'])
+def insert_data():
+    filter.fit(request.form.get("message"), request.form.get("type"))
+    return "it's work"
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -10,12 +10,14 @@ class FilterMessage:
     def __init__(self):
         self.message = []
         self.lable = []
+        self.dataset = ''
 
     def run_classification(self, predict_value):
         """
         Run classification using K-Neirest Neighbors Algorthm
         """
-        dataset = pd.read_json("./data/message.json");
+        dataset = pd.read_csv("./data/message.csv")
+        self.dataset = dataset
         x = dataset.iloc[:, 0].values
         y = dataset.iloc[:, -1].values
 
@@ -39,6 +41,18 @@ class FilterMessage:
         """
         return self.run_classification(message)
 
+    def fit(self, message, type):
+        """
+        fit and write new data
+        """
+
+        data_frame = pd.DataFrame(self.dataset)
+        new_data = {
+            "message": message,
+            "type": type
+        }
+        new_file = data_frame.append(new_data, ignore_index=True)
+        new_file.to_csv("data/message.csv", index=False)
 
 if __name__ != "__main__":
     filter = FilterMessage()

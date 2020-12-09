@@ -55,3 +55,34 @@
     outline: none;
     animation: tombol 0.3s ease forwards;
 }
+/* score btn */
+.col-score
+{
+    width: 100%;
+    height: 300px;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10%;
+    padding: 0% 5% 0% 5%;
+}
+.col-score h5{
+    font-size: 16px;
+}
+.cover-btn{
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+}
+.cover-btn .btn-secondary{
+    background-color: #dfd3d3;
+    color: #363636;
+    border: none;
+    margin-left: 5%;
+}
+.hide-score{
+    display: none;
+}
