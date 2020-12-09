@@ -31,17 +31,18 @@
                         <i class="mt-5">" {{query}} "</i>
                         {% if type[0] == 'spam' %}
                             <div class="alert alert-danger mt-3" role="alert">
-                                <b>{{type[0]}}</b>, pesan tersebut mengandung unsur menggangu
+                                <b>{{type[0]}}</b>, pesan tersebut mengandung unsur menggangu dan berbahaya
                             </div>
                         {% else %}
                             <div class="alert alert-success mt-3" role="alert">
-                                <b>{{type[0]}}</b>, pesan tersebut <b>tidak</b> mengandung unsur menggangu
+                                <b>{{type[0]}}</b>, pesan tersebut aman, <b>tidak</b> mengandung unsur menggangu
                             </div>
                         {% endif %}
                     {% endif %}
                 {% endif %}
                 <!-- resut check -->
                 <!--  -->
+                {% if type %}
                 <article>
                     <!-- similar message -->
                     <!-- <div class="similarity-class mt-5">
@@ -78,6 +79,9 @@
                     </div>
                     <!--  -->
                 </article>
+                {% else %}
+                <div></div>
+                {% endif %}
             </div>
         </div>
     </div>
