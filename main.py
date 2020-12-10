@@ -11,9 +11,14 @@ def home():
     if request.method == "GET":
         query = request.args.get('pesan', '')
         tipe = ''
+        similar_message = []
         if len(query) > 0:
-            tipe = filter.predict(query)
-        return render_template("index.html", query=query, type=tipe)
+            # check the data
+            check_data = filter.predict(query)
+            # set the data
+            tipe = check_data['prediction']
+            similar_message =check_data['similarity']
+        return render_template("index.html", query=query, type=tipe, similarity=similar_message)
     else:
         return render_template("index.html")
 

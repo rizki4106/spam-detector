@@ -45,18 +45,18 @@
                 {% if type %}
                 <article>
                     <!-- similar message -->
-                    <!-- <div class="similarity-class mt-5">
+                    {% if similarity %}
+                    <div class="similarity-class mt-5">
                         <h6>Pesan yang mirip</h6>
+                        {% for message in similarity %}
                         <div class="similar-message">
-                            <span>We did it bro, you are amazing..!</span>
+                            <span>{{message}}</span>
                         </div>
-                        <div class="similar-message">
-                            <span>We did it bro, you are amazing..!</span>
-                        </div>
-                        <div class="similar-message">
-                            <span>We did it bro, you are amazing..!</span>
-                        </div>
-                    </div> -->
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        <div></div>
+                    {% endif %}
                     <!--  -->
                     <div class="col-score">
                         <div>
